@@ -1,0 +1,13 @@
+**$followers [artist name]**
+*This command will list how many followers an artist has on Spotify.*
+```$followers Ariana Grande```
+**$topsongs [artist name]**
+*This command will list the top 10 songs for an artist on Spotify.*
+```$topsongs Elvis Presley```
+**$related [artist name]**
+*This command will list up to 20 artists similar to an artist on Spotify.*
+```$related Taylor Swift```
+**$albums [artist name]***
+*This commands will list an artist's top 10 albums*
+```$albums Machine Gun Kelly```
+
