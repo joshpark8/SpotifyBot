@@ -51,4 +51,4 @@ async def commands(context):
   embed=discord.Embed(title="Command List", description=txt, color=0xFF5733)
   await context.send(embed=embed)
 
-bot.run(os.getenv('DiscordKey'))
+bot.run(os.getenv('SpotifyBotKey'))
