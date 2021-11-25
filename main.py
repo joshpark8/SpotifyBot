@@ -7,7 +7,8 @@ import spotify
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix='$')
-    
+bot.remove_command('help')
+
 @bot.event
 async def on_ready():
   print('login successful')
@@ -44,7 +45,7 @@ async def albums(context):
   else:
     await context.send(r)
 
-@bot.command()
+@bot.command(aliases=['help'])
 async def commands(context):
   txt = Path('.\commands.txt').read_text()
   embed=discord.Embed(title="Command List", description=txt, color=0xFF5733)
