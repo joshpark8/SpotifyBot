@@ -47,7 +47,9 @@ async def albums(context):
 
 @bot.command(aliases=['help'])
 async def commands(context):
-  txt = Path('.\commands.txt').read_text()
+  dirname = os.path.dirname(__file__)
+  with open(dirname + '/commands.txt') as f:
+    txt = f.read()
   embed=discord.Embed(title="Command List", description=txt, color=0xFF5733)
   await context.send(embed=embed)
 
