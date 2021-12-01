@@ -7,7 +7,7 @@
 **$related [artist name]**
 *This command will list up to 20 artists similar to an artist on Spotify.*
 ```$related Taylor Swift```
-**$albums [artist name]***
+**$albums [artist name]**
 *This commands will list an artist's top 10 albums*
 ```$albums Machine Gun Kelly```
 
