@@ -1,7 +1,5 @@
 import discord
 import os
-import requests
-from pathlib import Path
 import spotify
 
 from discord.ext import commands
