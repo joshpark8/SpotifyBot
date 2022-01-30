@@ -1,5 +1,6 @@
 import requests
 import json
+import os
 
 base_url = 'https://api.spotify.com/v1/'
 
@@ -9,8 +10,8 @@ authenticate to spotify that I have permission to use their API.
 It also uses an HTTP post to fetch and return the access token.
 '''
 def auth():
-    cid = '81e4cc229b3b48388283926b652c2464'
-    secret = '8565ec9a7cbe4487bbd6834f3eea4ac2'
+    cid = os.getenv('SpotifyCID')
+    secret = os.getenv('SpotifyClientSecret')
     auth_url = 'https://accounts.spotify.com/api/token'
     r = requests.post(auth_url, {
         'grant_type': 'client_credentials',
