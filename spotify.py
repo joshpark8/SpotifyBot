@@ -46,7 +46,7 @@ This function fetches the artist's name
 def get_artist_name(artist_id, headers):
     r = requests.get(base_url + 'artists/' + artist_id, headers = headers)
     artist = r.json()
-    json_formatted_str = json.dumps(r, indent=2) #
+    json_formatted_str = json.dumps(artist, indent=2) #
     print(json_formatted_str) #
     return artist['name']
     
@@ -61,7 +61,7 @@ def followers(content):
     
     r = requests.get(base_url + 'artists/' + artist_id, headers = headers)
     artist = r.json()
-    json_formatted_str = json.dumps(r, indent=2) #
+    json_formatted_str = json.dumps(artist, indent=2) #
     print(json_formatted_str) #
     artist_name = get_artist_name(artist_id, headers)
     follow_count = artist['followers']['total']
@@ -78,7 +78,7 @@ def topSongs(content):
     
     r = requests.get(base_url + 'artists/' + artist_id + '/top-tracks?market=US&limit=10', headers = headers)
     top_tracks = r.json()
-    json_formatted_str = json.dumps(r, indent=2) #
+    json_formatted_str = json.dumps(top_tracks, indent=2) #
     print(json_formatted_str) #
     artist_name = get_artist_name(artist_id, headers)
     song_names = []
@@ -98,7 +98,7 @@ def related(content):
     
     r = requests.get(base_url + 'artists/' + artist_id + '/related-artists', headers = headers)
     related_artists = r.json()
-    json_formatted_str = json.dumps(r, indent=2) #
+    json_formatted_str = json.dumps(related_artists, indent=2) #
     print(json_formatted_str) #
     artist_name = get_artist_name(artist_id, headers)
     artist_names = []
@@ -119,7 +119,7 @@ def albums(content):
     
     r = requests.get(base_url + 'artists/' + artist_id + '/albums?limit=10', headers = headers)
     albums = r.json()
-    json_formatted_str = json.dumps(r, indent=2) #
+    json_formatted_str = json.dumps(albums, indent=2) #
     print(json_formatted_str) #
     artist_name = get_artist_name(artist_id, headers)
     album_names = []
